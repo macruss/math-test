@@ -16,9 +16,15 @@ hr {
 .container {
   max-width: 960px;
   margin: 20px auto;
-  height: 500px;
+  min-height: 500px;
   border-radius: 10px;
   background-color: rgba(255,255,255,.7);
+}
+
+.container:after {
+  content:"";
+  display: table;
+  clear:both;
 }
 
 .nav-tabs {
@@ -89,10 +95,10 @@ input.answer {
   color: red;
 }
 .score span {
-  display: block;
+  display: inline-block;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
   color: black;
   font-size: 80px;
-  position: relative;
-  left: 40%;
-
 }

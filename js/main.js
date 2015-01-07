@@ -19,7 +19,14 @@
           dev: ' / '
         },
         randOperator = operators[this.opts[randInt(this.opts.length -1)]],
-        expression = a + randOperator + b;
+        expression = '';
+
+        if (randOperator === ' - ' && b > a) {
+          expression = b + randOperator + a;
+        } else {
+          expression = a + randOperator + b;
+        }
+
         this.result = eval(expression);
     return expression;
   };
